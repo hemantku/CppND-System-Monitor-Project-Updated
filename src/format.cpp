@@ -1,5 +1,7 @@
+//
+// Created by Vineet Ghatge Hemantkumar on 2020-07-05.
+//
 #include <string>
-
 #include "format.h"
 
 using std::string;
@@ -7,10 +9,10 @@ using std::to_string;
 
 string Format::ElapsedTime(long seconds)
 {
-    long time_hours = seconds/3600;
-    long time_left = seconds%3600;
-    long time_minutes = {time_left/60};
-    long time_seconds = {time_left%60};
+    long time_hours = seconds / 3600;
+    long time_left = seconds % 3600;
+    long time_minutes = {time_left / 60};
+    long time_seconds = {time_left % 60};
 
     string time_hours_str = to_string(time_hours);
     string time_minutes_str = to_string(time_minutes);

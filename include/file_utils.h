@@ -2,8 +2,8 @@
 // Created by Vineet Ghatge Hemantkumar on 2020-07-05.
 //
 
-#ifndef FILE_UTILS_H
-#define FILE_UTILS_H
+#ifndef MONITOR_FILE_UTILS_H
+#define MONITOR_FILE_UTILS_H
 
 #include <fstream>
 #include <regex>
@@ -15,12 +15,10 @@ using std::ifstream;
 using std::istringstream;
 using std::string;
 
-
 namespace FileUtils {
-
     template <typename T>
-    T get_value(string const &filter, string const &file)
-    {
+    T get_value(string const &filter, string const &file
+    ) {
         string line, key;
         T value;
         ifstream stream(LinuxParser::kProcDirectory + file);
@@ -36,8 +34,6 @@ namespace FileUtils {
         }
         return value;
     };
-
-
     template <typename T>
     T get_value(string const &filename) {
         string line;
@@ -69,7 +65,5 @@ namespace FileUtils {
         }
         return status_list;
     };
-};
-
-
-#endif //FILE_UTILS_H
+}
+#endif //MONITOR_FILE_UTILS_H
